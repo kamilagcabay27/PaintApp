@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paint_app"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-black"/>
+
+    <com.kamilagcabay.paintapp.CanvasView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/canvasView"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:id="@+id/clearButton"
+            android:textSize="15sp"
+            android:backgroundTint="#0288D1"
+            android:drawableLeft="@drawable/ic_eraser"
+            android:paddingHorizontal="50dp"
+            android:text="@string/clear"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/colorButton"
+            android:drawableLeft="@drawable/ic_brush"
+            android:paddingHorizontal="30dp"
+            android:drawablePadding="15dp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:backgroundTint="#FF8F00"
+            android:text="@string/change_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>
